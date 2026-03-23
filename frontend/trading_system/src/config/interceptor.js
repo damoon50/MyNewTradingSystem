@@ -45,7 +45,7 @@ router.beforeEach(async(to, from, next) => {
             }
         }
     } else {
-        if (to.path === "/login" || to.path === "/register") {
+        if (to.path === "/login" || to.path === "/register" || to.path === "/feedback-harness") {
             next();
         } else {
             next("/login");

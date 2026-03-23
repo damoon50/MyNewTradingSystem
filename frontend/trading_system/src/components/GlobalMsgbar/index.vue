@@ -1,27 +1,23 @@
 <template>
   <div>
-    <v-snackbar top
-                dark
-                v-model="visible"
-                :color="color"
+    <v-snackbar
+      top
+      v-model="snackbarVisible"
+      :content-class="['global-message__content', toneClass]"
     >
-
-      {{ msg }}
-
-      <template v-slot:action="{ attrs }">
+      <div class="global-message__body" data-testid="global-message">
+        <span class="global-message__text">{{ msg }}</span>
         <v-btn
-            v-if="showClose"
-            text
-            @click="close"
-            v-bind="attrs"
-            icon
+          v-if="showClose"
+          text
+          icon
+          class="global-message__close"
+          data-testid="global-message-close"
+          @click="close"
         >
-          <v-icon>mdi-close</v-icon>
+          <v-icon small>mdi-close</v-icon>
         </v-btn>
-      </template>
-
-
-
+      </div>
     </v-snackbar>
   </div>
 </template>
@@ -30,8 +26,15 @@
 export default {
   name: "GlobalMsgbar",
   computed: {
-    visible() {
-      return this.$store.state.GlobalMsgbar.visible
+    snackbarVisible: {
+      get() {
+        return this.$store.state.GlobalMsgbar.visible
+      },
+      set(value) {
+        if (!value) {
+          this.close()
+        }
+      }
     },
     showClose() {
       return this.$store.state.GlobalMsgbar.showClose
@@ -41,6 +44,10 @@ export default {
     },
     msg() {
       return this.$store.state.GlobalMsgbar.msg
+    },
+    toneClass() {
+      const tone = this.color || 'info'
+      return `global-message__content--${tone}`
     }
   },
   methods: {
@@ -52,5 +59,18 @@ export default {
 </script>
 
 <style scoped>
+.global-message__body {
+  display: flex;
+  align-items: center;
+  gap: var(--ts-space-3);
+  width: 100%;
+}
 
+.global-message__text {
+  flex: 1 1 auto;
+}
+
+.global-message__close {
+  flex: 0 0 auto;
+}
 </style>

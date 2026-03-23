@@ -1,64 +1,76 @@
 <template>
-  <div>
+  <div class="avatar-upload">
     <v-dialog v-model="showUploadDialog" persistent max-width="600">
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-            text
-            color="primary"
-            class="mx-4"
-            dark
-            v-bind="attrs"
-            v-on="on"
+          text
+          color="primary"
+          class="mx-4 avatar-upload__trigger"
+          data-testid="upload-dialog-trigger"
+          v-bind="attrs"
+          v-on="on"
         >
           上传 / 修改
         </v-btn>
       </template>
-      <v-card>
-        <v-card-title class="headline">选择文件并上传您的头像</v-card-title>
-        <v-card-text class="mx-auto">
+      <v-card class="ts-feedback-panel avatar-upload__dialog" data-testid="upload-dialog">
+        <div class="ts-feedback-panel__header avatar-upload__header">
+          <span class="ts-feedback-panel__eyebrow">Avatar Upload</span>
+          <h2 class="ts-feedback-panel__title">选择文件并上传您的头像</h2>
+          <p class="ts-feedback-panel__copy">
+            支持 JPG 或 PNG，大小不超过 2MB。选择图片后可裁剪为 1:1 头像。
+          </p>
+        </div>
+        <v-card-text class="ts-feedback-panel__body avatar-upload__body">
           <v-row class="my-1" justify="center">
-            <v-col cols="auto">
+            <v-col cols="12" md="10">
               <a-upload
-                  v-if="!hasChosenImage"
-                  name="file"
-                  :file-list="fileList"
-                  list-type="picture-card"
-                  class="avatar-uploader"
-                  :show-upload-list="false"
-                  :before-upload="beforeUpload"
+                v-if="!hasChosenImage"
+                name="file"
+                :file-list="fileList"
+                list-type="picture-card"
+                class="ts-upload-select avatar-upload__selector"
+                :show-upload-list="false"
+                :before-upload="beforeUpload"
               >
-                <div class="uploadBtn">
-                  <a-icon type="plus"/>
+                <div class="avatar-upload__picker-copy">
+                  <a-icon type="plus" class="avatar-upload__picker-icon" />
                   <div class="ant-upload-text">
-                    Upload
+                    选择头像
                   </div>
+                  <p class="avatar-upload__picker-hint">拖拽或点击上传后即可进入裁剪流程</p>
                 </div>
               </a-upload>
             </v-col>
           </v-row>
 
 
-          <div id="cropper-wrapper" v-if="isCropping">
+          <div class="avatar-upload__cropper" v-if="isCropping">
             <VueCropper
-                ref="cropper"
-                :img="imageCropOptions.img"
-                :outputSize="imageCropOptions.size"
-                :outputType="imageCropOptions.outputType"
-                :autoCrop="true"
-                :fixed="true"
-                :fixedNumber="[1, 1]"
-                :centerBox="true"
+              ref="cropper"
+              :img="imageCropOptions.img"
+              :outputSize="imageCropOptions.size"
+              :outputType="imageCropOptions.outputType"
+              :autoCrop="true"
+              :fixed="true"
+              :fixedNumber="[1, 1]"
+              :centerBox="true"
             ></VueCropper>
           </div>
 
-
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions class="ts-feedback-actions avatar-upload__actions">
           <v-spacer></v-spacer>
-          <v-btn color="success" text @click="confirmAvatarCrop" :disabled="!isCropping">
+          <v-btn
+            color="primary"
+            depressed
+            class="avatar-upload__confirm"
+            :disabled="!isCropping"
+            @click="confirmAvatarCrop"
+          >
             确认
           </v-btn>
-          <v-btn color="error" text @click="closeUploadDialog">取消</v-btn>
+          <v-btn outlined @click="closeUploadDialog">取消</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -208,22 +220,56 @@ export default {
 </script>
 
 <style scoped>
-.uploadBtn {
-  width: 350px;
+.avatar-upload__trigger {
+  border: 1px solid rgba(22, 93, 255, 0.18) !important;
+  border-radius: var(--ts-radius-pill) !important;
+  background: linear-gradient(135deg, var(--ts-color-primary-soft), rgba(6, 174, 212, 0.1)) !important;
+  color: var(--ts-color-primary) !important;
 }
 
-.ant-upload-select-picture-card i {
+.avatar-upload__header,
+.avatar-upload__body,
+.avatar-upload__actions {
+  position: relative;
+  z-index: 1;
+}
+
+.avatar-upload__picker-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ts-space-2);
+  text-align: center;
+}
+
+.avatar-upload__picker-icon {
   font-size: 32px;
-  color: #999;
+  color: var(--ts-color-primary);
 }
 
-.ant-upload-select-picture-card .ant-upload-text {
-  margin-top: 8px;
-  color: #666;
+.avatar-upload__picker-hint {
+  margin: 0;
+  color: var(--ts-color-muted-text);
+  font-size: 0.82rem;
 }
 
-#cropper-wrapper {
+.avatar-upload__cropper {
   height: 300px;
   width: auto;
+  margin-top: var(--ts-space-4);
+  overflow: hidden;
+  border: 1px solid var(--ts-color-border);
+  border-radius: var(--ts-radius-md);
+}
+
+.avatar-upload__confirm {
+  min-width: 104px;
+}
+
+@media (max-width: 600px) {
+  .avatar-upload__trigger {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
 }
 </style>

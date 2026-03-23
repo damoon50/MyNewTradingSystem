@@ -1,85 +1,115 @@
 <template>
-  <div class="fullScreenHeight">
-    <div class="fullScreenHeight" id="loginBackground">
+  <div class="auth-page">
+    <div class="auth-page__viewport" id="loginBackground">
       <v-card
-        class="loginCard pa-6 mx-auto rounded-lg"
-        max-width="600"
+        class="loginCard auth-card-surface mx-auto"
+        data-testid="auth-card"
         elevation="4"
       >
-        <v-container id="loginFormContainer">
+        <div class="auth-card__panel">
+          <section class="auth-hero" aria-label="登录导览">
+            <div class="auth-hero__brand">
+              <div class="auth-hero__brand-mark" aria-hidden="true">
+                <span class="auth-hero__brand-code">TS</span>
+              </div>
+              <div class="auth-hero__brand-copy">
+                <span class="auth-hero__eyebrow">Trading System</span>
+                <strong class="auth-hero__heading">Secure access portal</strong>
+              </div>
+            </div>
+
+            <div class="auth-hero__summary">
+              <div>
+                <div class="auth-copy__eyebrow">Sign in</div>
+                <h1 class="auth-copy__title" data-testid="auth-title">登录</h1>
+              </div>
+              <p class="auth-copy__subtitle grey--text">使用您的账户名和密码来登录系统</p>
+              <p class="auth-copy__detail">
+                登录后将继续进入当前角色的交易工作台，并保持既有路由与权限流程不变。
+              </p>
+            </div>
+
+            <div class="auth-hero__metrics" aria-hidden="true">
+              <div class="auth-meta">
+                <span class="auth-meta__label">Access lane</span>
+                <span class="auth-meta__value">Role-aware routing</span>
+              </div>
+              <div class="auth-meta">
+                <span class="auth-meta__label">Session</span>
+                <span class="auth-meta__value">Token protected</span>
+              </div>
+            </div>
+          </section>
+
           <v-form
             v-model="valid"
             ref="loginForm"
             lazy-validation
-            class="loginFormContainer"
+            class="auth-form"
+            data-testid="auth-form"
           >
-            <div class="text-h3 my-2">登录</div>
-            <p class="text-subtitle-1 grey--text">
-              使用您的账户名和密码来登录系统
-            </p>
+            <div class="auth-form__signals" aria-hidden="true">
+              <span class="auth-signal auth-signal--primary">可信会话入口</span>
+              <span class="auth-signal">登录后自动拉取身份信息</span>
+            </div>
 
-            <v-row>
-              <v-col>
-                <v-text-field
-                  v-model="user.account"
-                  :rules="rules.basicRules"
-                  label="用户名"
-                  class="rounded-lg"
-                  hide-details
-                  rounded
-                  filled
-                  single-line
-                ></v-text-field>
-              </v-col>
-            </v-row>
+            <div class="auth-form__stack">
+              <v-text-field
+                v-model="user.account"
+                :rules="rules.basicRules"
+                label="用户名"
+                class="rounded-lg"
+                hide-details
+                rounded
+                filled
+                single-line
+              ></v-text-field>
 
-            <v-row>
-              <v-col>
-                <v-text-field
-                  v-model="user.password"
-                  :rules="rules.basicRules"
-                  label="密码"
-                  class="rounded-lg"
-                  hide-details
-                  rounded
-                  filled
-                  single-line
-                  type="password"
-                ></v-text-field>
-              </v-col>
-            </v-row>
+              <v-text-field
+                v-model="user.password"
+                :rules="rules.basicRules"
+                label="密码"
+                class="rounded-lg"
+                hide-details
+                rounded
+                filled
+                single-line
+                type="password"
+              ></v-text-field>
+            </div>
 
-            <!--登录/注册 按钮-->
-            <v-row justify-md="end">
-              <v-col cols="12" md="3">
-                <v-btn
-                  block
-                  color="primary"
-                  depressed
-                  class="rounded-lg"
-                  height="50px"
-                  @click="submit"
-                >
-                  <v-icon>mdi-login-variant</v-icon>
-                  <span class="mx-2">登录</span>
-                </v-btn>
-              </v-col>
-              <v-col cols="12" md="3">
-                <v-btn
-                  block
-                  outlined
-                  depressed
-                  class="rounded-lg"
-                  height="50px"
-                  @click="resetForm"
-                >
-                  <v-icon>mdi-account-plus</v-icon>
-                  <span class="mx-2">注册</span>
-                </v-btn>
-              </v-col>
-            </v-row>
+            <div class="auth-form__actions">
+              <v-btn
+                block
+                color="primary"
+                depressed
+                class="rounded-lg"
+                data-testid="auth-primary-cta"
+                @click="submit"
+              >
+                <v-icon>mdi-login-variant</v-icon>
+                <span>登录</span>
+              </v-btn>
+              <v-btn
+                block
+                outlined
+                depressed
+                class="rounded-lg"
+                data-testid="auth-secondary-cta"
+                @click="resetForm"
+              >
+                <v-icon>mdi-account-plus</v-icon>
+                <span>注册</span>
+              </v-btn>
+            </div>
+
+            <div class="auth-form__footer">
+              <p class="auth-form__footnote">
+                仅保留当前登录字段、验证规则与跳转逻辑，界面更新不会改动认证载荷。
+              </p>
+            </div>
           </v-form>
-        </v-container>
+        </div>
       </v-card>
     </div>
   </div>
@@ -123,21 +153,4 @@ export default {
 </script>
 
 <style scoped>
-.loginCard {
-  position: relative;
-  top: 50%;
-  transform: translateY(-60%);
-  background-color: rgb(255, 255, 255) !important;
-}
-
-.fullScreenHeight {
-  height: 100%;
-}
-
-#loginBackground {
-  /*background-image: url('../../assets/bg3.jpg');*/
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 </style>

@@ -15,6 +15,7 @@ Vue.prototype.$message = GlobalMessage;
 /* Ant-Design文件上传组件 */
 import { Upload, Icon } from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
+import './styles/global.scss';
 Vue.use(Upload);
 Vue.use(Icon);
 /* 加入Antd的按钮组件*/

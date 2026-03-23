@@ -4,6 +4,7 @@ import Nav from "../views/common/Nav";
 import Login from "../views/common/Login";
 import PageNotFound from "../views/common/PageNotFound";
 import Register from "../views/common/Register";
+import FeedbackHarness from "../views/common/FeedbackHarness";
 import GoodsOnSale from "../views/bussiness/GoodsOnSale";
 import SaleGoods from "../views/bussiness/SaleGoods";
 import GoodsSaled from "../views/bussiness/GoodsSaled";
@@ -31,6 +32,11 @@ export const defaultRoutes = [{
         path: "/404",
         name: "NotFoundPage",
         component: PageNotFound,
+    },
+    {
+        path: "/feedback-harness",
+        name: "FeedbackHarness",
+        component: FeedbackHarness,
     },
 ];
 

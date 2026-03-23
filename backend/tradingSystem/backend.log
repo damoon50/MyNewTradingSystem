@@ -7,17 +7,17 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.6)
 
-2026-03-15 23:41:19.976  INFO 65412 --- [           main] c.e.t.TradingSystemApplication           : Starting TradingSystemApplication using Java 23.0.2 on LAPTOP-CVVHH0GJ with PID 65412 (E:\ASUS\Github\hznu_workspace\myTradingSystem\backend\tradingSystem\build\libs\tradingSystem-0.0.1-SNAPSHOT.jar started by ASUS in E:\ASUS\Github\hznu_workspace\myTradingSystem\backend\tradingSystem)
-2026-03-15 23:41:19.982  INFO 65412 --- [           main] c.e.t.TradingSystemApplication           : No active profile set, falling back to 1 default profile: "default"
-2026-03-15 23:41:22.341  INFO 65412 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 16666 (http)
-2026-03-15 23:41:22.365  INFO 65412 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-15 23:41:22.365  INFO 65412 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2026-03-15 23:41:22.535  INFO 65412 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-15 23:41:22.535  INFO 65412 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2420 ms
-2026-03-15 23:41:22.592  INFO 65412 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-15 23:41:22.972  INFO 65412 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-15 23:41:23.004  INFO 65412 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:tradingSystem'
-2026-03-15 23:41:23.143 ERROR 65412 --- [           main] c.e.t.e.blockchain.BlockChainMapperImpl  : Init Fabric Contract Failed,src\main\resources\crypto-config\peerOrganizations\org1.example.com\users\User1@org1.example.com\msp\signcerts\cert.pem
+2026-03-20 20:21:47.184  INFO 35712 --- [           main] c.e.t.TradingSystemApplication           : Starting TradingSystemApplication using Java 23.0.2 on LAPTOP-CVVHH0GJ with PID 35712 (E:\ASUS\Github\MyNewTradingSystem\backend\tradingSystem\build\libs\tradingSystem-0.0.1-SNAPSHOT.jar started by ASUS in E:\ASUS\Github\MyNewTradingSystem\backend\tradingSystem)
+2026-03-20 20:21:47.220  INFO 35712 --- [           main] c.e.t.TradingSystemApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-20 20:21:59.574  INFO 35712 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 16666 (http)
+2026-03-20 20:21:59.705  INFO 35712 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-20 20:21:59.707  INFO 35712 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2026-03-20 20:22:00.487  INFO 35712 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-20 20:22:00.489  INFO 35712 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12504 ms
+2026-03-20 20:22:00.778  INFO 35712 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-20 20:22:02.600  INFO 35712 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-20 20:22:02.730  INFO 35712 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:tradingSystem'
+2026-03-20 20:22:03.426 ERROR 35712 --- [           main] c.e.t.e.blockchain.BlockChainMapperImpl  : Init Fabric Contract Failed,src\main\resources\crypto-config\peerOrganizations\org1.example.com\users\User1@org1.example.com\msp\signcerts\cert.pem
 java.nio.file.NoSuchFileException: src\main\resources\crypto-config\peerOrganizations\org1.example.com\users\User1@org1.example.com\msp\signcerts\cert.pem
 	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
 	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
@@ -59,193 +59,70 @@ java.nio.file.NoSuchFileException: src\main\resources\crypto-config\peerOrganiza
 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
-2026-03-15 23:41:25.633  INFO 65412 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 16666 (http) with context path ''
-2026-03-15 23:41:25.674  INFO 65412 --- [           main] c.e.t.TradingSystemApplication           : Started TradingSystemApplication in 6.507 seconds (JVM running for 7.712)
-2026-03-15 23:43:35.926  INFO 65412 --- [io-16666-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-15 23:43:35.926  INFO 65412 --- [io-16666-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-15 23:43:35.929  INFO 65412 --- [io-16666-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-03-15 23:43:36.241  INFO 65412 --- [io-16666-exec-2] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
-2026-03-15 23:43:36.283  INFO 65412 --- [io-16666-exec-3] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
-2026-03-15 23:43:36.484  INFO 65412 --- [io-16666-exec-4] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
-2026-03-15 23:43:41.841  INFO 65412 --- [io-16666-exec-5] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
-2026-03-15 23:43:46.448  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : [LOGIN]Begin to login
-2026-03-15 23:43:46.457  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : user[1]password
-2026-03-15 23:43:46.684  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : [LOGIN]Login succeed.
+2026-03-20 20:22:09.993  INFO 35712 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 16666 (http) with context path ''
+2026-03-20 20:22:10.108  INFO 35712 --- [           main] c.e.t.TradingSystemApplication           : Started TradingSystemApplication in 27.09 seconds (JVM running for 33.136)
+2026-03-20 20:25:31.199  INFO 35712 --- [io-16666-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 20:25:31.200  INFO 35712 --- [io-16666-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-20 20:25:31.206  INFO 35712 --- [io-16666-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNzk1OTUxLCJpbmZvIjoiMiJ9.D8F3psIzXIndaGknyCtj5f7CNLhkZBYXWlkjP5yL8rs
+2026-03-20 20:25:50.515  INFO 35712 --- [io-16666-exec-4] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
+2026-03-20 20:25:51.397  INFO 35712 --- [io-16666-exec-5] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
+2026-03-20 20:25:57.318  INFO 35712 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : [LOGIN]Begin to login
+2026-03-20 20:25:57.343  INFO 35712 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : user[1]password
+2026-03-20 20:25:57.846  INFO 35712 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : [LOGIN]Login succeed.
+get in preHandle
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:43:46.759  INFO 65412 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : [GETUSERINFO]Begin to get User Info
-2026-03-15 23:43:46.760  INFO 65412 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : token iseyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
-2026-03-15 23:43:46.761  INFO 65412 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : account :1 role is 2
+2026-03-20 20:25:57.944  INFO 35712 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : [GETUSERINFO]Begin to get User Info
+2026-03-20 20:25:57.950  INFO 35712 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : token iseyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
+2026-03-20 20:25:57.956  INFO 35712 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : account :1 role is 3
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:43:50.964  INFO 65412 --- [io-16666-exec-9] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
+2026-03-20 20:26:00.535  INFO 35712 --- [io-16666-exec-1] c.e.t.web.controller.UserController      : [getCusInfoById]Begin to get Bus Info
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:43:52.612  INFO 65412 --- [io-16666-exec-1] c.e.t.w.controller.CommodityController   : [getGoodSaledbyBus] Begin and the id is 00011
+2026-03-20 20:26:00.616  INFO 35712 --- [io-16666-exec-3] c.e.t.web.controller.UserController      : [getCusMonthSpentById]getCusMonthSpentById
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:43:58.500  INFO 65412 --- [io-16666-exec-3] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
+2026-03-20 20:26:00.705  INFO 35712 --- [io-16666-exec-5] c.e.t.web.controller.UserController      : [getBusAccountList]getBusAccountList begin
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:43:59.594  INFO 65412 --- [io-16666-exec-2] c.e.t.w.controller.CommodityController   : [getGoodSaledbyBus] Begin and the id is 00011
+2026-03-20 20:27:57.692  INFO 35712 --- [io-16666-exec-9] c.e.t.w.controller.CommodityController   : [getGoodBeBaughtbyCus] Begin and the id is 00001
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMDI2LCJpbmZvIjoiMSJ9.kdx8z7bU6taJQbkQ4NHPiww3yODdfzgY8O2tsYwncvo
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:44:03.143  INFO 65412 --- [io-16666-exec-4] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
-2026-03-15 23:44:13.665  INFO 65412 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : [REGISTER]Begin to register.
-2026-03-15 23:44:16.220  INFO 65412 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : [LOGIN]Begin to login
-2026-03-15 23:44:16.223  INFO 65412 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : user[2]password
-2026-03-15 23:44:16.225  INFO 65412 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : [LOGIN]Login succeed.
+2026-03-20 20:28:00.335  INFO 35712 --- [io-16666-exec-1] c.e.t.w.controller.CommodityController   : [getAllSaleGoodInfo] begin
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:16.237  INFO 65412 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : [GETUSERINFO]Begin to get User Info
-2026-03-15 23:44:16.239  INFO 65412 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : token iseyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-2026-03-15 23:44:16.241  INFO 65412 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : account :2 role is 1
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:19.446  INFO 65412 --- [io-16666-exec-1] c.e.t.web.controller.UserController      : [getAllBusInfo]getAllBusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:20.952  INFO 65412 --- [io-16666-exec-2] c.e.t.web.controller.UserController      : [getAllCusInfo]getAllCusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:21.965  INFO 65412 --- [io-16666-exec-5] c.e.t.w.controller.CommodityController   : [getAllCommodityInfo]getAllCommodityInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:22.933  INFO 65412 --- [io-16666-exec-7] c.e.t.web.controller.TradeController     : [getAllTrade]getAllTrade
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:23.675  INFO 65412 --- [io-16666-exec-8] c.e.t.w.controller.CommodityController   : [getAllCommodityInfo]getAllCommodityInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:24.070  INFO 65412 --- [io-16666-exec-9] c.e.t.web.controller.UserController      : [getAllCusInfo]getAllCusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:24.419  INFO 65412 --- [o-16666-exec-10] c.e.t.web.controller.UserController      : [getAllBusInfo]getAllBusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:24.828  INFO 65412 --- [io-16666-exec-1] c.e.t.web.controller.UserController      : [getAllCusInfo]getAllCusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:25.147  INFO 65412 --- [io-16666-exec-3] c.e.t.w.controller.CommodityController   : [getAllCommodityInfo]getAllCommodityInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:25.552  INFO 65412 --- [io-16666-exec-2] c.e.t.web.controller.TradeController     : [getAllTrade]getAllTrade
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:26.002  INFO 65412 --- [io-16666-exec-4] c.e.t.w.controller.CommodityController   : [getAllCommodityInfo]getAllCommodityInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:26.297  INFO 65412 --- [io-16666-exec-5] c.e.t.web.controller.UserController      : [getAllCusInfo]getAllCusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:26.600  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : [getAllBusInfo]getAllBusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:32.276  INFO 65412 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : [getAllCusInfo]getAllCusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:33.401  INFO 65412 --- [io-16666-exec-8] c.e.t.w.controller.CommodityController   : [getAllCommodityInfo]getAllCommodityInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:34.359  INFO 65412 --- [io-16666-exec-9] c.e.t.web.controller.TradeController     : [getAllTrade]getAllTrade
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:34.967  INFO 65412 --- [o-16666-exec-10] c.e.t.w.controller.CommodityController   : [getAllCommodityInfo]getAllCommodityInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:35.351  INFO 65412 --- [io-16666-exec-1] c.e.t.web.controller.UserController      : [getAllCusInfo]getAllCusInfo
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyIiwiZXhwIjoxNzczNTkzMDU2LCJpbmZvIjoiMiJ9.qnEkX_DqnU43aZFIYkaQi2U-5wm0MoXehO5v6mwmQnw
-id : 2
-2026-03-15 23:44:35.907  INFO 65412 --- [io-16666-exec-3] c.e.t.web.controller.UserController      : [getAllBusInfo]getAllBusInfo
-2026-03-15 23:45:54.524  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : [LOGIN]Begin to login
-2026-03-15 23:45:54.526  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : user[1]password
-2026-03-15 23:45:54.526  INFO 65412 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : [LOGIN]Login succeed.
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:45:54.543  INFO 65412 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : [GETUSERINFO]Begin to get User Info
-2026-03-15 23:45:54.543  INFO 65412 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : token iseyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-2026-03-15 23:45:54.545  INFO 65412 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : account :1 role is 2
+2026-03-20 20:28:01.466  INFO 35712 --- [io-16666-exec-2] c.e.t.w.controller.CommodityController   : [getGoodBeBaughtbyCus] Begin and the id is 00001
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:45:55.770  INFO 65412 --- [io-16666-exec-8] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
+2026-03-20 20:28:02.036  INFO 35712 --- [io-16666-exec-3] c.e.t.w.controller.CommodityController   : [getAllSaleGoodInfo] begin
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:46:07.334  INFO 65412 --- [io-16666-exec-9] c.e.t.w.controller.CommodityController   : [SALE]Begin to sale goods
+2026-03-20 20:28:03.851  INFO 35712 --- [io-16666-exec-4] c.e.t.w.controller.CommodityController   : [getGoodBeBaughtbyCus] Begin and the id is 00001
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:46:07.382  INFO 65412 --- [o-16666-exec-10] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
+2026-03-20 20:28:04.525  INFO 35712 --- [io-16666-exec-5] c.e.t.w.controller.CommodityController   : [getAllSaleGoodInfo] begin
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:46:12.334  INFO 65412 --- [io-16666-exec-1] c.e.t.w.controller.CommodityController   : [getGoodSaledbyBus] Begin and the id is 00011
+2026-03-20 20:28:04.863  INFO 35712 --- [io-16666-exec-6] c.e.t.web.controller.UserController      : [getCusInfoById]Begin to get Bus Info
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:46:13.415  INFO 65412 --- [io-16666-exec-3] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
+2026-03-20 20:28:05.019  INFO 35712 --- [io-16666-exec-7] c.e.t.web.controller.UserController      : [getCusMonthSpentById]getCusMonthSpentById
 get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
+get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzc0MDEzMTU3LCJpbmZvIjoiMSJ9.ZCEr0nSnAEHLaQVpNx8S7sVUouD0r8DnP-wYE-FJ_XA
 id : 1
-2026-03-15 23:46:24.954  INFO 65412 --- [io-16666-exec-2] c.e.t.w.controller.CommodityController   : [getGoodSaledbyBus] Begin and the id is 00011
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:26.222  INFO 65412 --- [io-16666-exec-4] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:29.962  INFO 65412 --- [io-16666-exec-5] c.e.t.w.controller.CommodityController   : [getGoodSaledbyBus] Begin and the id is 00011
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:30.693  INFO 65412 --- [io-16666-exec-6] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:40.018  INFO 65412 --- [io-16666-exec-7] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:41.467  INFO 65412 --- [io-16666-exec-8] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:42.166  INFO 65412 --- [io-16666-exec-9] c.e.t.w.controller.CommodityController   : [getGoodSaledbyBus] Begin and the id is 00011
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-id : 1
-2026-03-15 23:46:43.064  INFO 65412 --- [o-16666-exec-10] c.e.t.w.controller.CommodityController   : [getSaleGoodInfo] begin
-2026-03-16 07:28:15.278  WARN 65412 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h40m20s804ms205Âµs).
-get in preHandle
-get token£ºeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwiZXhwIjoxNzczNTkzMTU0LCJpbmZvIjoiMSJ9.Ly7uVyhYxUk0_pWCCNUsK5yfPqdnBR5GtV4uRjdWaEA
-2026-03-16 07:56:40.004  WARN 65412 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m53s595ms206Âµs).
-2026-03-16 07:57:58.807  WARN 65412 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s774ms529Âµs100ns).
+2026-03-20 20:28:05.108  INFO 35712 --- [io-16666-exec-8] c.e.t.web.controller.UserController      : [getBusAccountList]getBusAccountList begin
+^C

@@ -1,30 +1,42 @@
 <template>
-  <div class="px-3 py-3">
-    <a-upload-dragger
-    :file-list="fileList" 
-    :remove="handleRemove" 
-    :before-upload="beforeUpload"
-    style="width: 300px;"
-    >
-    <p>
-    <v-icon large>mdi-cloud-upload</v-icon>
-    </p>
-    <p class="ant-upload-text">
-    点击或拖动以上传文件
-    </p>
-    <p class="ant-upload-hint">
-    您只能够提交一个文件
-    </p>
-    </a-upload-dragger>
-    <a-button
-      type="primary"
-      :disabled="fileList.length === 0 || fileList.length > 1"
-      :loading="uploading"
-      style="margin-top: 16px;"
-      @click="handleUpload"
-    >
-      {{ uploading ? 'Uploading' : 'Start Upload' }}
-    </a-button>
+  <div class="ts-feedback-panel dropzone-panel">
+    <div class="ts-feedback-panel__header dropzone-panel__header">
+      <span class="ts-feedback-panel__eyebrow">File Upload</span>
+      <h2 class="ts-feedback-panel__title">提交作业文件</h2>
+      <p class="ts-feedback-panel__copy">
+        使用七牛上传通道提交单个压缩包，支持 zip / rar / tar / 7z，大小不超过 2MB。
+      </p>
+    </div>
+    <div class="ts-feedback-panel__body dropzone-panel__body">
+      <div data-testid="upload-dropzone">
+        <a-upload-dragger
+          :file-list="fileList"
+          :remove="handleRemove"
+          :before-upload="beforeUpload"
+          class="ts-upload-dropzone"
+        >
+          <p class="ant-upload-drag-icon">
+            <v-icon large>mdi-cloud-upload</v-icon>
+          </p>
+          <p class="ant-upload-text">
+            点击或拖动以上传文件
+          </p>
+          <p class="ant-upload-hint">
+            您只能够提交一个文件
+          </p>
+        </a-upload-dragger>
+      </div>
+      <a-button
+        type="primary"
+        class="ts-upload-primary-cta"
+        data-testid="upload-primary-cta"
+        :disabled="fileList.length === 0 || fileList.length > 1"
+        :loading="uploading"
+        @click="handleUpload"
+      >
+        {{ uploading ? 'Uploading' : 'Start Upload' }}
+      </a-button>
+    </div>
   </div>
 </template>
 <script>
@@ -176,3 +188,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.dropzone-panel__header,
+.dropzone-panel__body {
+  position: relative;
+  z-index: 1;
+}
+</style>
